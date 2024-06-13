@@ -15,9 +15,10 @@
     <dialog >
         <button id="exit">X</button>
         <form method="dialog">
-            <input type="text" name="title" id="title" placeholder="author">
-            <input type="text" name="author" id="author" placeholder="author">
-            <input type="number" name="nbrPage" id="nbrPage" min="1" placeholder="nombre de page">
+            <input type="text" name="title" id="title" placeholder="author" required>
+            <input type="text" name="author" id="author" placeholder="author" required>
+            <input type="number" name="nbrPage" id="nbrPage" min="1" placeholder="nombre de page" required>
+            <input type="checkbox" name="read" id="read">
             <input type="submit" value="Add">
         </form>
     </dialog>
