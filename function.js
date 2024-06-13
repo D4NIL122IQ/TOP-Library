@@ -5,7 +5,6 @@ const author = document.querySelector("#author")
 const nbrPage = document.querySelector("#nbrPage")
 const exitDialog = document.querySelector("#exit")
 const displayCards = document.querySelector(".displayCard")
-let deleteButtons = document.querySelectorAll(".sup");
 const form = document.querySelector("form")
 
 function Book(title , author , nbrPage){
@@ -19,19 +18,19 @@ function addBookToLibrary(newBook) {
     div.className = "card";
     div.innerHTML =' <p>'+ newBook.title + '</p> <p>'+ newBook.author + '</p>  <p>'+ newBook.nbrPage + '</p> <button class="read"> read</button> <button class="sup">sup</button>'
     displayCards.appendChild(div)
-    deleteButtons = document.querySelectorAll(".sup");
-    console.log(deleteButtons)
-    
+    const deleteButtons = document.querySelectorAll(".sup");
+
+
+    deleteButtons.forEach((button)=> {
+        button.addEventListener("click",()=>{
+            displayCards.removeChild(button.parentElement)
+        })
+    })
 }
 
-deleteButtons.forEach((button)=>{
-    button.addEventListener("click",()=>{
-        console.log("hello")
-    })
-})
+
 
 btnAdd.addEventListener("click" , ()=>{
-    console.log(deleteButtons)
     dialog.showModal()
 })
 
