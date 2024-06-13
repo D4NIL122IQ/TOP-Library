@@ -3,3 +3,81 @@
     padding: 0px;
     box-sizing: border-box;
   }
+
+header{
+    background-color: black;
+    color: aliceblue;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addButton {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.addButton > button{
+    height: 50px;
+    width: 120px;
+    font-size: large;
+    font-weight: bolder;
+    border-radius: 10px;
+    border: 2px solid black;
+
+}
+
+dialog{
+    height: 400px;
+    width: 500px;
+    margin: 0px auto ;
+
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+dialog > #exit{
+    width: 30px;
+
+}
+dialog>form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+dialog>form > input{
+    height: 25px;
+    width: 400px;
+}
+
+.displayCard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px
+}
+
+.card{
+    width: 300px;
+    height: 150px;
+    margin: 10px;
+    padding: 10px;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+    border: 1px solid black;
+
+}
+
+.card > button{
+    width: 200px;
+    margin: 0px auto;
+}
