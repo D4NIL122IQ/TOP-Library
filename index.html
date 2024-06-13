@@ -12,19 +12,35 @@
         <h1>Library</h1>
     </header>
 
-    <dialog >
-        <button id="exit">X</button>
-        <form method="dialog">
-            <input type="text" name="title" id="title" placeholder="author" required>
-            <input type="text" name="author" id="author" placeholder="author" required>
-            <input type="number" name="nbrPage" id="nbrPage" min="1" placeholder="nombre de page" required>
-            <input type="checkbox" name="read" id="read">
-            <input type="submit" value="Add">
-        </form>
-    </dialog>
+    
     <div class="container">
-        <button type="button" id="add">Ajouter +</button>
+        <div class="addButton">
+            <button type="button" id="add">Ajouter +</button>
+            <dialog >
+                <button id="exit">X</button>
+                <form method="dialog">
+                    <input type="text" name="title" id="title" placeholder="author" required>
+                    <input type="text" name="author" id="author" placeholder="author" required>
+                    <input type="number" name="nbrPage" id="nbrPage" min="1" placeholder="nombre de page" required>
+                    <div class="checkbox">
+                        <label for="read">Already read ?</label>
+                        <input type="checkbox" name="read" id="read">
+                    </div>
+                    <input type="submit" value="Add">
+                </form>
+            </dialog>
+        </div>
+        
+
         <div class="displayCard">
+            <div class="card"><p> Title : da</p> <p> Author : au</p>  <p> number of pages : 21</p> <button class="isread red"> Read</button><button class="sup">Remove</button></div>
+            <div class="card"><p> Title : da</p> <p> Author : au</p>  <p> number of pages : 21</p> <button class="isread red"> Read</button><button class="sup">Remove</button></div>
+            <div class="card"><p> Title : da</p> <p> Author : au</p>  <p> number of pages : 21</p> <button class="isread red"> Read</button><button class="sup">Remove</button></div>
+            <div class="card"><p> Title : da</p> <p> Author : au</p>  <p> number of pages : 21</p> <button class="isread red"> Read</button><button class="sup">Remove</button></div>
+            <div class="card"><p> Title : da</p> <p> Author : au</p>  <p> number of pages : 21</p> <button class="isread red"> Read</button><button class="sup">Remove</button></div>
+            <div class="card"><p> Title : da</p> <p> Author : au</p>  <p> number of pages : 21</p> <button class="isread red"> Read</button><button class="sup">Remove</button></div>
+            <div class="card"><p> Title : da</p> <p> Author : au</p>  <p> number of pages : 21</p> <button class="isread red"> Read</button><button class="sup">Remove</button></div>
+            <div class="card"><p> Title : da</p> <p> Author : au</p>  <p> number of pages : 21</p> <button class="isread red"> Read</button><button class="sup">Remove</button></div>
             
         </div>
     </div>
