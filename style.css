@@ -5,7 +5,7 @@
   }
 
 header{
-    background-color: black;
+    background-color: #000000;
     color: aliceblue;
     height: 70px;
     display: flex;
@@ -13,8 +13,12 @@ header{
     align-items: center;
 }
 
+body{
+    background-color: #ffe4ff;
+}
+
 .addButton {
-    margin: 10px;
+    margin: 15px;
     display: flex;
     justify-content: center;
 }
@@ -22,62 +26,110 @@ header{
 .addButton > button{
     height: 50px;
     width: 120px;
-    font-size: large;
+    font-size: x-large;
     font-weight: bolder;
     border-radius: 10px;
     border: 2px solid black;
+}
 
+.addButton > button:hover{
+    background-color: #fffbf4;
+    box-shadow: 0px 0px 15px black;
 }
 
 dialog{
-    height: 400px;
-    width: 500px;
-    margin: 0px auto ;
-
-    flex-direction: column;
+    height: 375px;
+    width: 400px;
+    margin: 100px auto ;
     align-items: center;
-    gap: 10px;
-    padding: 10px;
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px;
 }
 
-dialog > #exit{
+dialog > .btnexit{
+    display: flex;
+    justify-content: end;
+    padding-right: 10px;
+}
+
+dialog >.btnexit >#exit{
     width: 30px;
-
+    height: 30px;
+    border-radius: 100%;
 }
+
+dialog >.btnexit >#exit:hover{
+    box-shadow: 0px 0px 5px black;
+}
+
 dialog>form{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+    font-size: large;
+    gap: 20px;
+    padding: 30px 0px;
 }
 
 dialog>form > input{
-    height: 25px;
-    width: 400px;
+    height: 35px;
+    width: 300px;
+    font-size: large;
+    border-radius: 5px;
+}
+
+dialog> form> input[type="submit"]:hover{
+
+   box-shadow: 0px 0px 10px black;
 }
 
 .displayCard{
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 20px;
     gap: 15px
 }
 
 .card{
+    background-color: #f2f2f2;
     width: 300px;
-    height: 150px;
+    height: 175px;
     margin: 10px;
     padding: 10px;
-    gap: 5px;
+    gap: 10px;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
-
     text-align: center;
     border: 1px solid black;
-
+    font-size: large;
+    box-shadow: 0px 0px 15px 0px black;
 }
 
 .card > button{
     width: 200px;
+    height: 60px;
     margin: 0px auto;
+    border-radius: 10px;
+    font-size: medium;
+}
+
+.card > button:hover{
+    box-shadow: 0px 0px 5px black;
+}
+
+.card > .sup:hover{
+    background-color: rgb(218, 25, 25);
+}
+.card>.green{
+    color: white;
+    background-color: rgb(32, 122, 32);
+}
+.card > .red{
+    color: white;
+    background-color: rgb(218, 25, 25);
 }
