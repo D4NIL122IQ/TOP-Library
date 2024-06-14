@@ -45,7 +45,6 @@ function addBookToLibrary(newBook) {
 
 
 btnAdd.addEventListener("click" , ()=>{
-    console.log("erbi")
     dialog.showModal()
 })
 
