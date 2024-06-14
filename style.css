@@ -5,16 +5,17 @@
   }
 
 header{
-    background-color: #000000;
+    background-color: #100c14;
     color: aliceblue;
     height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: x-large;
 }
 
 body{
-    background-color: #ffe4ff;
+    background-color: #8c9897;
 }
 
 .addButton {
