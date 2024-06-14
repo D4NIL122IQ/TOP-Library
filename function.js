@@ -9,6 +9,16 @@ const displayCards = document.querySelector(".displayCard")
 const form = document.querySelector("form")
 
 
+function verifyReadButtons(){
+   if(this.classList.contains("green")){
+        this.classList.remove("green")
+        this.classList.add("red")
+    }else{
+        this.classList.remove("red")
+        this.classList.add("green")
+    }  
+    
+}
 
 function Book(title , author , nbrPage, read){
     this.title = title;
@@ -21,20 +31,11 @@ function addBookToLibrary(newBook) {
     let div = document.createElement("div");
     div.className = "card";
     div.innerHTML ='<p> Title : '+ newBook.title + '</p> <p> Author : '+ newBook.author + '</p>  <p> number of pages : '+ newBook.nbrPage + '</p> '
-    div.innerHTML += (newBook.read)? '<button class="isread green" > Read </button>' : '<button class="isread red"> Read</button>'
+    div.innerHTML += (newBook.read)? '<button class="isread green"  onclick="verifyReadButtons.call(this)"> Read </button>' : '<button class="isread red" onclick="verifyReadButtons.call(this)"> Read</button>'
     div.innerHTML += '<button class="sup">Remove</button>'
     displayCards.appendChild(div)
     
-    const isReadButtons = document.querySelectorAll(".isread")
     const deleteButtons = document.querySelectorAll(".sup");
-
-
-    isReadButtons.forEach((button)=>{
-        button.addEventListener("click" , ()=>{
-            (button.className == "isread green")? button.className = "isread red" : button.className ="isread green"
-            
-        })
-    })
 
     deleteButtons.forEach((button)=> {
         button.addEventListener("click",()=>{
@@ -57,7 +58,7 @@ form.addEventListener("submit" ,()=>{
 
 })
 
-//annuler les fom
+//annuler les form
 dialog.addEventListener("close" , ()=>{
     form.reset()
     dialog.close()
